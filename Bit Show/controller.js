@@ -1,4 +1,9 @@
-const ctrlModule = (function (ui, data) {
+import * as data from './data.js';
+
+import *as ui from './ui.js'
+
+
+export const init = () => {
 
     $(ui.getInputSearch()).on("keyup", searchShow);
     $(ui.getHome()).on("click", init);
@@ -10,9 +15,15 @@ const ctrlModule = (function (ui, data) {
 
         const id = this.getAttribute("data-id");
 
-        data.getSingleShowData(id, ui.displayShowInfo);
-        data.showSeasons(id, ui.displaySeasons);
-        data.showCast(id, ui.displayCast)
+        data.getSingleShowData(id)
+            .then(show => ui.displayShowInfo(show))
+
+
+        data.showSeasons(id)
+            .then(show => ui.displaySeasons(show))
+
+        data.showCast(id)
+            .then(show => ui.displayCast(show))
     };
 
     function searchShow() {
@@ -39,10 +50,6 @@ const ctrlModule = (function (ui, data) {
         });
     }
 
-    return {
-        init
-    }
+
 
 }
-
-)(uiModule, dataModule)
