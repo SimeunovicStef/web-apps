@@ -1,0 +1,16 @@
+.header {
+    background-color: #ec6f75;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+li {
+    background-color: #556e79;
+    list-style-type: none;
+    color:white;
+    font-size: 15px;
+    width: 90%;
+}
