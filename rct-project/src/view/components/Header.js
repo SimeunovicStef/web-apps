@@ -3,7 +3,7 @@ import React from 'react'
 const Header = (props) => {
     return (
         <header>
-            <h3>моя первая версия </h3>
+            <h3>My react blog </h3>
         </header>
     )
 }
