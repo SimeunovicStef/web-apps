@@ -10,6 +10,7 @@ const Header = () => {
                     <li><a href="sass.html">Sass</a></li>
                     <li><a href="badges.html">Components</a></li>
                     <li><a href="collapsible.html">JavaScript</a></li>
+                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">++</i></a>
                 </ul>
             </div>
         </nav>

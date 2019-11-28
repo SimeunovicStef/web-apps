@@ -5,7 +5,7 @@ const UserList = (props) => {
     const { users } = props;
 
     const userItems = users.map(user => {
-        return <UserListItem />
+        return <UserListItem user={user} />
     })
 
     return (

@@ -1,6 +1,7 @@
 import React from "react"
 import UserList from './UserList'
-
+import getUsers from '../services/userService'
+import User from './User'
 class UserPage extends React.Component {
 
     constructor(props) {
@@ -10,6 +11,14 @@ class UserPage extends React.Component {
             users: [{}, {}]
         }
     }
+    // componentDidMount() {
+    //     getUsers()
+    //         .then((users) => {
+    //             console.log(users)
+    //             this.setState({ users: users })
+    //         })
+
+    // }
 
 
     render() {

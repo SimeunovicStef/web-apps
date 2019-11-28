@@ -1,15 +1,17 @@
 import React from 'react'
 
+{/* <UserListItem user={} /> */ }
 const UserListItem = (props) => {
 
     return (
-        <li class="collection-item avatar">
-            <img src="https://randomuser.me/api/portraits/med/men/90.jpg">
+        <li className="collection-item avatar">
+            <img src={props.user.picture} alt="" className="circle responsive-img" />
 
-            </img>
-            <span class="title">Title</span>
-            <p>name<br />
-                birthday</p>
+
+
+            <span className="title">Name: {props.user.name}</span>
+            <p>Age: {props.user.age}<br />
+                {props.user.email}</p>
 
         </li>
 
